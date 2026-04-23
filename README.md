@@ -42,7 +42,7 @@ The file is now saved under `.github/workflows/` in your repository — GitHub h
 
 ## Step 2 — Generate Your Signing Keys
 
-You need to generate a private signing key, encrypt it, and share the encryption details with Immutaverse. Run the following commands in your terminal:
+You need to generate a private signing key, encrypt it and Run the following commands in your terminal:
 
 ```bash
 # Generate RSA private key
@@ -72,11 +72,11 @@ Once the commands finish, you will have these files:
 | File | What to do with it |
 |---|---|
 | `signing_key.pem` | **Keep this private. Never share or commit it.** Store it securely offline. |
-| `aes.key` | **Send to Immutaverse** via email or the agreed channel |
-| `iv.key` | **Send to Immutaverse** via email or the agreed channel |
+| `aes.key` | ~~**Send to Immutaverse** via email or the agreed channel~~ |
+| `iv.key` | ~~**Send to Immutaverse** via email or the agreed channel~~ |
 | `encrypted_signing_key` | **You will use this as your `SIGN_KEY` secret in Step 3** |
 
-> Immutaverse uses `aes.key` and `iv.key` to decrypt your signing key when processing firmware. Without these, signing cannot proceed.
+> ~~Immutaverse uses `aes.key` and `iv.key` to decrypt your signing key when processing firmware. Without these, signing cannot proceed.~~
 
 ---
 
@@ -89,9 +89,10 @@ To add a secret, go to your repository on GitHub and navigate to:
 
 ---
 
+
 ### Secret 1: `IMT_TOKEN`
 
-This is your own GitHub Personal Access Token (PAT). It allows the workflow to read your firmware file and push the signed firmware back to your repository.
+This is your own GitHub Personal Access Token (PAT). It allows the workflow to read your firmware file, push the signed firmware back, and allows Immutaverse to notify you of the signing status.
 
 **How to create your PAT:**
 
@@ -101,13 +102,13 @@ This is your own GitHub Personal Access Token (PAT). It allows the workflow to r
 4. Click **Generate new token**
 5. Enter a name such as `IMT_TOKEN`
 6. Under **Repository access**, select **Only select repositories**, then use the dropdown to select your repository
-7. Under **Permissions**, click **Add permissions**, search for **`contents`**, and set access to **Read and write**
-8. Click **Generate token**
-9. **Copy the token immediately** — GitHub will not show it again
-
-Now add it as a secret:
-- **Name:** `IMT_TOKEN`
-- **Value:** The token you just copied
+7. **Repository Permissions:** Click **Add permissions**, search for **`contents`**, and set access to **Read and write**
+8. **Account Permissions (Required for Status Emails):**  
+   - Click the **Account** tab (next to the Repositories tab)  
+   - Click **Add permissions** and search for **Email addresses**  
+   - Set access to **Read-only**  
+9. Click **Generate token**
+10. **Copy the token immediately** — GitHub will not show it again
 
 ---
 
@@ -172,5 +173,5 @@ your_firmware.bin   →   signed_your_firmware.bin
 - The firmware file must have a **`.bin`** extension
 - The push must be to the **`main`** branch
 - The commit message must be **exactly** `Unsigned Firmware` — any variation will be ignored
-- `aes.key` and `iv.key` must be shared with Immutaverse before your first signing run
+- ~~`aes.key` and `iv.key` must be shared with Immutaverse before your first signing run~~
 - Never commit `signing_key.pem` to any repository — store it securely offline
