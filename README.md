@@ -3,8 +3,8 @@
 ![Immutaverse Blue White Logo](https://github.com/user-attachments/assets/f8929d7f-94a1-43bf-b73f-29aff0fc3756)
 
 ![GitHub Marketplace](https://img.shields.io/badge/GitHub-Marketplace-blue?logo=github)
-![Version](https://img.shields.io/github/v/release/adishvx/unSigned)
-![License](https://img.shields.io/github/license/adishvx/unSigned)
+![Version](https://img.shields.io/github/v/release/immutaverse/Firmware-Signing)
+![License](https://img.shields.io/github/license/immutaverse/Firmware-Signing)
 
 Securely sign firmware binaries directly from GitHub Actions using the Immutaverse Firmware Signing Action.
 
