@@ -8,7 +8,7 @@
 
 Securely sign firmware binaries directly from GitHub Actions using the Immutaverse Firmware Signing Action.
 
-**[Get started at immutaverse.com →](https://immutaverse.com/?utm_source=github&utm_medium=marketplace&utm_campaign=signing_action&utm_content=get_started)**
+**[Get started at immutaverse.com →](https://www.immutaverse.com/?utm_source=github&utm_medium=marketplace&utm_campaign=signing_action&utm_content=get_started)**
 
 ---
 
@@ -211,7 +211,7 @@ Unsigned Firmware
 
 For signing issues, licensing, or subscription inquiries, visit:
 
-[immutaverse.com](https://immutaverse.com/?utm_source=github&utm_medium=marketplace&utm_campaign=signing_action&utm_content=support)
+[immutaverse.com](https://www.immutaverse.com/?utm_source=github&utm_medium=marketplace&utm_campaign=signing_action&utm_content=support)
 
 ---
 
